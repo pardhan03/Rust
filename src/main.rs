@@ -1,3 +1,4 @@
+use Rust::stack_fn;
 fn main() {
 
     let sentence =String::from("This is my first Rust program");
@@ -9,6 +10,8 @@ fn main() {
     let string= String::from("Hello world");
     println!("{}",string);
     println!("Hello, world!");
+
+    stack_fn();
 }
 
 fn get_first_word(sentence: String) -> String {
