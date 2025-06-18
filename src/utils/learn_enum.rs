@@ -28,14 +28,14 @@ fn calculate_area(shape: Shape) -> f32 {
     return ans;
 }
 
-fn calculate() {
+pub fn calculate() {
     // Create instances of different shapes
     let circle = Shape::Circle(5.0);
     let square = Shape::Square(4.0);
     let rectangle = Shape::Rectangle(3.0, 6.0);
 
     let circle_area = calculate_area(circle);
-    println!("{}", circle_area);
+    println!("Calculate the area {}", circle_area);
 
 }
 
