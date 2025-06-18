@@ -46,7 +46,7 @@ pub fn string_own() {
     takes_ownership(my_string);
 
     // then the owner will remin the my_string in the string_own function
-    // takes_ownership(my_string.clone());
+    // takes_ownership(my_string.clone()); so this line cause error because the ownerhip has been moved
 
     // till here the own is now takes_ownershop function
     // println!("{}", my_string);
