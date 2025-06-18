@@ -1,3 +1,5 @@
+pub mod  learn_enum;
+
 pub  struct User{
     active: bool,
     username: String,

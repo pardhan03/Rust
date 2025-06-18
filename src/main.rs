@@ -1,4 +1,6 @@
 mod utils;
+
+use utils::learn_enum::{log_direction};
 use Rust::stack_fn;
 use Rust::heap_fn;
 use Rust::update_string;
@@ -23,6 +25,8 @@ fn main() {
     heap_own();
 
     string_own();
+
+    log_direction();
 
     utils::create_user();
 
