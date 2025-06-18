@@ -1,6 +1,8 @@
 use Rust::stack_fn;
 use Rust::heap_fn;
 use Rust::update_string;
+use Rust::heap_own;
+use Rust::string_own;
 fn main() {
 
     let sentence =String::from("This is my first Rust program");
@@ -16,6 +18,10 @@ fn main() {
     stack_fn(); // call the function that uses stack memory
     heap_fn(); // call the function that uses heap memory
     update_string(); // call the function that changes size of variable at runtime
+
+    heap_own();
+
+    string_own();
 }
 
 fn get_first_word(sentence: String) -> String {
