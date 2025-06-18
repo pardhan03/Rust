@@ -55,3 +55,59 @@ pub fn string_own() {
 pub fn takes_ownership(some_string:String){
     println!("{}", some_string);
 }
+
+// references
+
+pub fn referencing(){
+    let s1 = String::from("Hello");
+    let s2 = &s1;
+
+    println!("{}", s2);
+    println!("{}", s1); // This is valid because first pointer was not invalidated
+}
+
+// borrowing
+
+pub fn borrowing(){
+    let my_string = String::from("Hello");
+    // no hanky panky
+    borrowing_variable(&my_string);
+
+    // here we will get this because we are not sending ownership of the variable.
+    // Ownership was not moved, so we can still use my_string
+    println!("{}", my_string);
+}
+
+pub fn borrowing_variable(some_string: &String){
+    println!("{}", some_string)
+}
+
+// mutable referencing
+
+pub fn mutable_fn(){
+    let mut s1 = String::from("Hello");
+    // hanky panky
+    mutating_variable_borrowing(&mut s1);
+
+    println!("{}", s1)
+}
+
+pub fn mutating_variable_borrowing(s:&mut String){
+    s.push_str("World");
+}
+
+// more then one mutable referencing is not allowed
+
+// pub fn more_mut_referencing(){
+    // let mut s1 = String::from("Hello");
+    // let s2 = &mut s1;
+    // more_mutating_variable(&mut s1);
+
+    // println!("{}", s1); // cannot borrow `s1` as mutable more than once at a time
+
+    // println!("{}", s2);
+// }
+
+// pub fn more_mutating_variable(s:&mut String){
+    // s.push_str("World");
+// }
