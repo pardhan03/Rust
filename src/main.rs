@@ -1,3 +1,4 @@
+mod utils;
 use Rust::stack_fn;
 use Rust::heap_fn;
 use Rust::update_string;
@@ -22,6 +23,10 @@ fn main() {
     heap_own();
 
     string_own();
+
+    utils::create_user();
+
+    utils::test_rectangle();
 }
 
 fn get_first_word(sentence: String) -> String {
