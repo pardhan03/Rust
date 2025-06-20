@@ -6,6 +6,8 @@ use Rust::heap_fn;
 use Rust::update_string;
 use Rust::heap_own;
 use Rust::string_own;
+
+use Rust::learn_vec;
 fn main() {
 
     let sentence =String::from("This is my first Rust program");
@@ -33,6 +35,8 @@ fn main() {
     utils::create_user();
 
     utils::test_rectangle();
+
+    learn_vec::learn_vec();
 }
 
 fn get_first_word(sentence: String) -> String {

@@ -1,3 +1,5 @@
+pub mod learn_vec;
+
 pub fn stack_fn(){
     let a=10;
     let b=10;
@@ -22,7 +24,6 @@ pub fn update_string() {
     s.push_str(" and some additional text");
     print!("Capacity {}, length {}, pointer {:p}", s.capacity(), s.len(), s.as_ptr());
     println!("After update: {}", s);
-
     // if we add some big strig that pointer will also chanage because it require contigous memory to stoe the string
 }
 
