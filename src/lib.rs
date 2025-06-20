@@ -1,5 +1,5 @@
 pub mod learn_vec;
-
+pub mod hash_map;
 pub fn stack_fn(){
     let a=10;
     let b=10;
