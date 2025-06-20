@@ -41,6 +41,16 @@ fn main() {
     learn_vec::learn_vec();
 
     hash_map::learn_hashmap();
+
+    let result = match divide(4, 0){
+        Ok(num) => num,
+        Err(err) => {
+            println!("Error {err}");
+            -1
+        }
+    };
+
+    println!("Get the result of the divide function {:?}", result);
 }
 
 fn get_first_word(sentence: String) -> String {
@@ -52,4 +62,12 @@ fn get_first_word(sentence: String) -> String {
         }
     }
     return  ans;
+}
+
+pub fn divide(x:i32, y:i32) -> Result<i32, String>{
+    if y ==0 {
+        return Err(String::from("Please don't divided by 0"));
+    }
+
+    Ok(x/y)
 }
