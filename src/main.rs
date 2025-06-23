@@ -10,6 +10,9 @@ use Rust::string_own;
 use Rust::learn_vec;
 
 use Rust::hash_map;
+
+// use Rust::learn_generics;
+use  Rust::learn_generics;
 fn main() {
 
     let sentence =String::from("This is my first Rust program");
@@ -41,6 +44,8 @@ fn main() {
     learn_vec::learn_vec();
 
     hash_map::learn_hashmap();
+
+    learn_generics::main_gen_fun();
 
     let result = match divide(4, 0){
         Ok(num) => num,
