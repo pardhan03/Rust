@@ -13,6 +13,8 @@ use Rust::hash_map;
 
 // use Rust::learn_generics;
 use  Rust::learn_generics;
+
+use Rust::learn_trait;
 fn main() {
 
     let sentence =String::from("This is my first Rust program");
@@ -46,6 +48,8 @@ fn main() {
     hash_map::learn_hashmap();
 
     learn_generics::main_gen_fun();
+
+    learn_trait::trait_fn();
 
     let result = match divide(4, 0){
         Ok(num) => num,
